@@ -87,8 +87,8 @@ document.addEventListener('DOMContentLoaded', function() {
         alt: 'Cody on the front page of the Pioneer'
     },
     {
-        src: 'images/gallery/14-cody-baloon.jpg', // Note: "baloon" - typo in filename?
-        thumb: 'images/gallery/thumbs/14-cody-baloon.jpg',
+        src: 'images/gallery/14-cody-balloon.jpg', // Note: "baloon" - typo in filename?
+        thumb: 'images/gallery/thumbs/14-cody-balloon.jpg',
         alt: 'Cody with a balloon'
     },
     {
