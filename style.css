@@ -1,0 +1,421 @@
+/* General Reset & Body */
+body {
+    margin: 0;
+    font-family: 'Lato', 'Helvetica Neue', Arial, sans-serif; /* UPDATED */
+    background-color: #333; /* Dark background for the overall page */
+    color: #333;
+    line-height: 1.6;
+    font-weight: 400; /* Default body weight for Lato */
+}
+
+a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* Header */
+header {
+    background-color: #2d2d2d; /* Dark gray as in screenshots */
+    color: #f0f0f0;
+    padding: 20px 0;
+    text-align: center;
+}
+
+header nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 20px 0;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+header nav ul li a {
+    color: #ccc;
+    text-decoration: none;
+    font-weight: 700; /* Using Lato Bold for nav links for better emphasis */
+    text-transform: uppercase;
+    font-size: 0.9em;
+    padding: 5px 10px;
+    letter-spacing: 0.5px; /* Slight letter spacing for uppercase Lato */
+}
+
+header nav ul li a:hover,
+header nav ul li a.active {
+    color: #fff;
+    border-bottom: 2px solid #fff;
+}
+
+.site-title h1 {
+    font-family: 'Jost', sans-serif; /* UPDATED */
+    font-size: 2.8em;
+    margin: 10px 0 5px 0;
+    font-weight: 700; /* Jost Bold */
+    color: #fff;
+    letter-spacing: 1px; /* Jost often looks good with a little spacing */
+}
+
+.site-title p {
+    font-family: 'Jost', sans-serif; /* UPDATED */
+    font-size: 1.1em;
+    margin: 0;
+    color: #bbb;
+    font-style: italic;
+    font-weight: 400; /* Jost Regular Italic */
+}
+
+/* Main Content Area */
+main {
+    max-width: 900px;
+    margin: 30px auto;
+    padding: 30px;
+    background-color: #f9f7f2; /* Light beige/off-white */
+    box-shadow: 0 0 15px rgba(0,0,0,0.1);
+    border-radius: 5px; /* Optional subtle rounding */
+}
+
+.page-title {
+    text-align: center;
+    font-size: 1.8em;
+    color: #555;
+    margin-bottom: 30px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #eee;
+    text-transform: uppercase;
+    font-weight: 700; /* Lato Bold for page titles */
+    letter-spacing: 1px;
+}
+
+/* Utility Classes */
+.text-center {
+    text-align: center;
+}
+
+.mb-20 {
+    margin-bottom: 20px;
+}
+.mb-30 {
+    margin-bottom: 30px;
+}
+
+.img-responsive {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Section Styling */
+.content-section {
+    margin-bottom: 40px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #eaeaea;
+}
+.content-section:last-child {
+    border-bottom: none;
+    margin-bottom: 0;
+}
+
+.content-section h2 {
+    font-size: 1.5em;
+    color: #444;
+    margin-bottom: 15px;
+    text-align: center;
+    font-weight: 700; /* Lato Bold for section headings */
+}
+.content-section h3 {
+    font-size: 1.2em;
+    color: #555;
+    margin-top: 20px;
+    margin-bottom: 10px;
+    font-weight: 700; /* Lato Bold for sub-headings */
+}
+
+/* Two-column layout */
+.two-columns {
+    display: flex;
+    gap: 30px;
+}
+
+.two-columns > div {
+    flex: 1;
+}
+
+.two-columns ul {
+    list-style: disc;
+    padding-left: 20px;
+}
+
+/* Home Page Gallery (gallery.html) */
+.gallery-container {
+    position: relative;
+    margin-bottom: 20px;
+}
+
+.gallery-main-image img {
+    width: 100%;
+    height: auto;
+    border: 1px solid #ddd;
+}
+
+.gallery-nav {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    pointer-events: none;
+}
+
+.gallery-nav button {
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    font-size: 20px;
+    cursor: pointer;
+    pointer-events: all;
+    border-radius: 3px;
+}
+.gallery-nav button:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+.gallery-nav .prev { margin-left: 10px; }
+.gallery-nav .next { margin-right: 10px; }
+
+
+.gallery-thumbnails {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: center;
+    margin-top: 15px;
+}
+
+.gallery-thumbnails img {
+    width: 100px;
+    height: 75px;
+    object-fit: cover;
+    cursor: pointer;
+    border: 2px solid transparent;
+    opacity: 0.7;
+    transition: opacity 0.3s, border-color 0.3s;
+}
+
+.gallery-thumbnails img:hover,
+.gallery-thumbnails img.active {
+    opacity: 1;
+    border-color: #007bff;
+}
+
+/* Clients Page */
+.clients-list {
+    columns: 2;
+    -webkit-columns: 2;
+    -moz-columns: 2;
+    column-gap: 40px;
+}
+
+.clients-list ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.clients-list li {
+    margin-bottom: 8px;
+    font-size: 0.95em;
+}
+
+/* Variety Page Specifics (now index.html) */
+.variety-item {
+    margin-bottom: 40px;
+}
+.variety-item img {
+    margin-bottom: 15px;
+}
+.variety-item h3 { /* This was Sleight of Hand title */
+    text-align: center;
+    font-size: 1.3em;
+    margin-bottom: 10px;
+    font-weight: 700; /* Lato Bold */
+}
+.variety-item p {
+    font-size: 0.95em;
+    color: #555;
+    text-align: center;
+}
+.variety-columns {
+    display: flex;
+    gap: 20px;
+    text-align: left;
+}
+.variety-columns > div {
+    flex: 1;
+}
+.variety-columns h4 { /* Comedy Stage Magic, Events titles */
+    font-size: 1.1em;
+    text-align: center;
+    margin-bottom: 5px;
+    font-weight: 700; /* Lato Bold */
+}
+.variety-columns p { /* Text under Comedy Stage Magic, Events */
+    text-align: center; /* Keep centered as per previous design */
+}
+
+
+/* Contact Page */
+.contact-info p {
+    font-size: 1.1em;
+    margin-bottom: 10px;
+}
+.contact-info strong {
+    display: inline-block;
+    width: 80px;
+    font-weight: 700; /* Lato Bold for labels */
+}
+
+/* Contact Page Enhancements */
+.contact-details-grid {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Center items if they don't take full width */
+    gap: 20px; /* Space between email and phone items */
+    margin-top: 20px;
+}
+
+.contact-item {
+    display: flex;
+    align-items: center;
+    gap: 10px; /* Space between icon, label, and link */
+    font-size: 1.1em;
+}
+
+.contact-icon {
+    width: 24px; /* Adjust icon size if needed */
+    height: 24px;
+    stroke: #555; /* Icon color */
+    flex-shrink: 0; /* Prevent icon from shrinking */
+}
+
+.contact-label {
+    font-weight: 700; /* Lato Bold */
+    color: #333;
+}
+
+.contact-link {
+    font-weight: 400; /* Lato Regular for the link itself */
+    color: #007bff; /* Standard link blue */
+    word-break: break-all; /* Helps with long email addresses on small screens */
+}
+.contact-link:hover {
+    text-decoration: underline;
+}
+
+/* Responsive adjustment for contact items if needed */
+@media (max-width: 480px) {
+    .contact-item {
+        flex-direction: column; /* Stack icon, label, link vertically */
+        text-align: center;
+        gap: 5px;
+    }
+    .contact-label {
+        margin-top: 5px;
+    }
+}
+
+/* Clients Page Specific Styles */
+.client-feature-image {
+    margin: 0 auto 30px auto; /* Center the figure and add bottom margin */
+    text-align: center; /* Center the image and caption within the figure */
+    max-width: 650px; /* Control the max width of the figure itself */
+}
+
+.client-feature-image img {
+    max-width: 100%; /* Image will scale within the figure's max-width */
+    height: auto;
+    display: block; /* Remove any extra space below image */
+    margin-bottom: 10px; /* Space between image and caption */
+    border: 1px solid #e0e0e0; /* Optional subtle border around the image */
+    padding: 5px; /* Optional padding inside the border */
+    background-color: #fff; /* If image has transparency, a white bg helps */
+}
+
+.image-caption {
+    font-size: 0.85em;
+    color: #666;
+    font-style: italic;
+    text-align: center;
+}
+
+.clients-list {
+    columns: 2;
+    -webkit-columns: 2;
+    -moz-columns: 2;
+    column-gap: 40px;
+    margin-top: 20px; /* Ensure some space above the list if needed */
+}
+
+.clients-list ul {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 20px 0; /* Add some bottom margin to ul if it's the last in a column */
+}
+
+.clients-list li {
+    margin-bottom: 10px; /* Slightly increased spacing between client names */
+    font-size: 0.95em;
+    line-height: 1.5; /* Improved line height for readability */
+}
+
+/* Responsive adjustments for client list if one column is preferred on smaller screens */
+@media (max-width: 560px) { /* Adjust breakpoint as needed */
+    .clients-list {
+        columns: 1;
+        -webkit-columns: 1;
+        -moz-columns: 1;
+    }
+    .client-feature-image {
+        max-width: 90%; /* Allow image to be a bit wider on small screens */
+    }
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    header nav ul {
+        flex-direction: column;
+        gap: 10px;
+    }
+    .site-title h1 {
+        font-size: 2em;
+    }
+    .site-title p {
+        font-size: 1em;
+    }
+    main {
+        margin: 20px 10px;
+        padding: 20px;
+    }
+    .two-columns {
+        flex-direction: column;
+        gap: 20px;
+    }
+    .clients-list {
+        columns: 1;
+        -webkit-columns: 1;
+        -moz-columns: 1;
+    }
+    .gallery-thumbnails img {
+        width: 80px;
+        height: 60px;
+    }
+    .variety-columns {
+        flex-direction: column;
+    }
+}

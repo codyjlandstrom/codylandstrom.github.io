@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gallery - Cody Landstrom</title>
+    <!-- Favicon Links -->
+    <link rel="icon" href="/favicon.ico" sizes="any">
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png"> {/* Should be 180x180px */}
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <!-- Google Fonts Link -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,700;1,400&family=Lato:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+    <!-- Your Stylesheet -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="gallery.html">Gallery</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="clients.html">Clients</a></li>
+            </ul>
+        </nav>
+        <div class="site-title">
+            <h1>CODY LANDSTROM</h1>
+            <p>Magical Entertainment</p>
+        </div>
+    </header>
+
+    <main>
+        <!-- <h1 class="page-title">Image Gallery</h1> Optional: Add a title to the gallery page if desired -->
+        <div class="gallery-container">
+            <div class="gallery-main-image">
+                <img id="galleryMainImage" src="images/cody-landscape-hero.jpg" alt="Cody Landstrom">
+            </div>
+            <div class="gallery-nav">
+                <button class="prev" aria-label="Previous image">❮</button>
+                <button class="next" aria-label="Next image">❯</button>
+            </div>
+        </div>
+        <div class="gallery-thumbnails">
+            <!-- Thumbnails will be populated by JavaScript -->
+            <!-- Ensure your script.js 'galleryImages' array is configured -->
+        </div>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
