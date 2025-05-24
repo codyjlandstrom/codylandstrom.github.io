@@ -36,7 +36,7 @@
     <main>
         <!-- <h1 class="page-title">Image Gallery</h1> Optional: Add a title to the gallery page if desired -->
         <div class="gallery-container">
-            <div class="gallery-main-image">
+            <div class="gallery-main-image-wrapper">
                 <img id="galleryMainImage" src="images/cody-landscape-hero.jpg" alt="Cody Landstrom">
             </div>
             <div class="gallery-nav">
@@ -44,6 +44,7 @@
                 <button class="next" aria-label="Next image">❯</button>
             </div>
         </div>
+        <div id="galleryCaption" class="gallery-caption"></div>
         <div class="gallery-thumbnails">
             <!-- Thumbnails will be populated by JavaScript -->
             <!-- Ensure your script.js 'galleryImages' array is configured -->

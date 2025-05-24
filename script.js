@@ -12,11 +12,12 @@ document.addEventListener('DOMContentLoaded', function() {
     const galleryContainer = document.querySelector('.gallery-container');
     if (galleryContainer) {
         const mainImage = document.getElementById('galleryMainImage');
+        const galleryCaptionElement = document.getElementById('galleryCaption');
         const thumbnailsContainer = document.querySelector('.gallery-thumbnails');
         const prevButton = document.querySelector('.gallery-nav .prev');
         const nextButton = document.querySelector('.gallery-nav .next');
 
-        // --- IMPORTANT: Define your gallery images here ---
+        // --- IMPORTANT: Define gallery images here ---
         // The 'src' is the path to the large image
         // The 'thumb' is the path to the thumbnail image
         // The 'alt' is the alternative text for the image
@@ -87,7 +88,7 @@ document.addEventListener('DOMContentLoaded', function() {
         alt: 'Cody on the front page of the Pioneer'
     },
     {
-        src: 'images/gallery/14-cody-balloon.jpg', // Note: "baloon" - typo in filename?
+        src: 'images/gallery/14-cody-balloon.jpg',
         thumb: 'images/gallery/thumbs/14-cody-balloon.jpg',
         alt: 'Cody with a balloon'
     },
@@ -145,8 +146,16 @@ document.addEventListener('DOMContentLoaded', function() {
         function showImage(index) {
             if (index < 0 || index >= galleryImages.length) return;
             currentImageIndex = index;
-            mainImage.src = galleryImages[index].src;
-            mainImage.alt = galleryImages[index].alt;
+
+            const currentImageData = galleryImages[index]; // Get current image data
+
+            mainImage.src = currentImageData.src;
+            mainImage.alt = currentImageData.alt;
+
+            // Update caption
+            if (galleryCaptionElement) { // Check if caption element exists
+                galleryCaptionElement.textContent = currentImageData.alt; // Set caption text
+            }
 
             // Update active thumbnail
             const allThumbnails = thumbnailsContainer.querySelectorAll('img');
@@ -188,10 +197,11 @@ document.addEventListener('DOMContentLoaded', function() {
         
         if (galleryImages.length > 0) {
             populateThumbnails();
-            showImage(0); // Show the first image initially
+            showImage(0); // Show the first image and its caption initially
         } else {
             console.warn("No images defined for the gallery in script.js");
             if(mainImage) mainImage.alt = "Gallery image placeholder - configure images in script.js";
+            if(galleryCaptionElement) galleryCaptionElement.textContent = "Please configure images for the gallery.";
         }
     }
 });
