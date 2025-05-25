@@ -279,6 +279,12 @@ main {
 }
 .variety-item img {
     margin-bottom: 15px;
+    /* Optional additions: */
+    border: 1px solid #e0e0e0; /* Subtle border */
+    /* or */
+    /* box-shadow: 0 2px 5px rgba(0,0,0,0.1); */ /* Subtle shadow */
+    padding: 3px; /* If using a border, a little padding can look nice */
+    background-color: #fff; /* If image has transparency and you add padding/border */
 }
 .variety-item h3 { /* This was Sleight of Hand title */
     text-align: center;
@@ -307,6 +313,12 @@ main {
 }
 .variety-columns p { /* Text under Comedy Stage Magic, Events */
     text-align: center; /* Keep centered as per previous design */
+}
+
+.sleight-of-hand-section p {
+    max-width: 70ch; /* Approx 70 characters wide */
+    margin-left: auto;
+    margin-right: auto;
 }
 
 
